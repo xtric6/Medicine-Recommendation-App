@@ -29,7 +29,7 @@ with tab1:
     st.subheader('Please do consult your doctor before taking any of the recommended drugs')
 
     text = st.text_area(label ='Enter the KEYWORDS of the symptoms you are experiencing.',
-                        placeholder = 'Enter the keywords of the symptoms are you experiencing e.g headache, stomach pain, diarrhea, body pain,fever\
+                        placeholder = 'e.g headache, stomach pain, diarrhea, body pain,fever\
 ,infection,cold,catarrh,diabetes,hypertension,diarrhea,cough,vagina infections,body odour e.t.c'
                         ,height = 100)
 
