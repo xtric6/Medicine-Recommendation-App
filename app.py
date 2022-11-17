@@ -75,7 +75,7 @@ with tab1:
                 break
         
             else: 
-                st.write('For mobile users, scroll down for more results')
+                st.latex('For mobile users,Scroll down for more results ⬇️')
                 st.write('**Here are the recommended drugs for the symptoms you are experiencing**')
                
                 result = ','.join(top5['Drug_Names'].tolist())
