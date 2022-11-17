@@ -21,8 +21,9 @@ df_dict = df.set_index('NAME_OF_PRODUCT').T.to_dict('list')
 list_drug_symptoms = [i[0] for i in list(df_dict.values())]
 list_drug_images = [i[1] for i in list(df_dict.values())]
 
+conn = sqlite3.connect('data.db')
 
-tab1, tab2= st.tabs(["Drug Recommender", "WordCloud ☁️"])
+tab1, tab2,tab3= st.tabs(["Drug Recommender", "WordCloud ☁️","❌"])
 
 with tab1:
     st.title('Drug Recommender :pill:')
@@ -106,7 +107,6 @@ with tab1:
 
 
         def database():
-            conn = sqlite3.connect('data.db')
             c = conn.cursor()
             c.execute("""CREATE TABLE IF NOT EXISTS users_symptom(symptoms TEXT,recommendations TEXT)""")
             c.execute("INSERT INTO users_symptom VALUES(?,?)",(text,result))
@@ -119,6 +119,9 @@ with tab2:
     st.subheader('Word Cloud showing the common symptoms this Webapp will recommend drugs for')
     st.image('wordcloud.png')
 
-
+with tab3:
+    st.header('Metrics')
+    mdf = pd.read_sql_query('SELECT * FROM users_symptom',conn)
+    st.dataframe(mdf)
 
    
