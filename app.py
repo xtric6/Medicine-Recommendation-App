@@ -8,7 +8,7 @@ import streamlit as st
 import sqlite3
 
 
-
+nltk.download('stopwords')
 
 ps = PorterStemmer()
 STOPWORDS = stopwords.words('english')
