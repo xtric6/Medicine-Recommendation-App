@@ -28,8 +28,7 @@ with tab1:
     st.title('Drug Recommender :pill:')
     st.subheader('This is an experimental project, consult your Doctor if you are felling unwell.')
 
-    text = st.text_area(label ='Enter the KEYWORDS of the symptoms you are experiencing.',
-                        placeholder = 'e.g headache, stomach pain, diarrhea, body pain,fever,infection,cold,catarrh,diabetes,hypertension,diarrhea,cough,vagina infections,body odour e.t.c'
+    text = st.text_area(label ='Enter the KEYWORDS of the symptoms you are experiencing.',placeholder = 'e.g headache, stomach pain, diarrhea, body pain,fever,infection,cold,catarrh,diabetes,hypertension,diarrhea,cough,vagina infections,body odour e.t.c'
                         ,height = 100)
 
     field_names = ['having','feel','symptoms','symptoms','experience','experiencing']
