@@ -1,6 +1,6 @@
 import pandas as pd 
 from nltk.tokenize import word_tokenize
-#from nltk.downloader import download, download_shell
+from nltk.downloader import download, download_shell
 from nltk.corpus import stopwords
 import re
 from nltk.stem import PorterStemmer
