@@ -9,6 +9,7 @@ import sqlite3
 
 
 download('stopwords')
+download('punkt')
 
 ps = PorterStemmer()
 STOPWORDS = stopwords.words('english')
