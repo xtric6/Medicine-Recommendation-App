@@ -75,7 +75,9 @@ with tab1:
                 break
         
             else: 
+                st.write('For mobile users, scroll down for more results')
                 st.write('**Here are the recommended drugs for the symptoms you are experiencing**')
+               
                 result = ','.join(top5['Drug_Names'].tolist())
             
             drug1,drug2,drug3,drug4,drug5 = st.columns(5)
