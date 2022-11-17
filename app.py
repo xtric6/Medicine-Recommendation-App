@@ -23,7 +23,7 @@ list_drug_images = [i[1] for i in list(df_dict.values())]
 
 conn = sqlite3.connect('data.db')
 
-tab1, tab2,tab3= st.tabs(["Drug Recommender", "WordCloud ☁️","."])
+tab1, tab2,tab3= st.tabs(["Drug Recommender", "WordCloud ☁️","  ."])
 
 with tab1:
     st.title('Drug Recommender :pill:')
